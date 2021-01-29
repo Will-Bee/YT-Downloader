@@ -9,6 +9,7 @@ YOU MUST EDIT PATH WHERE WILL YOUR MP3 FILE APPEAR
 
 
 !!! ALSO !!!
+
 setup.bat will install python libraries u need, so run it first
 run.bat will run command: python ytdownloader.py
 
