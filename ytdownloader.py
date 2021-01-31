@@ -61,7 +61,7 @@ def get_mp3():
     shutil.move(mp3, r"C:\Users\Admin\Music") ###_- !!! YOU NEED TO EDIT THIS LIKE: C:\Users\NAME\Music, or your custom path   !!! -_###
                                               ###_- !!! ANY OTHER DISC MUST BE WRITEN AS "E:\path or F:\path" DONT MAKE MISTAKE!!! -_###
     print("!!!CONVERTED SUCCESFULLY!!!")
-    print(Fore.GREEN + "")
+    print(Fore.GREEN + " ")
     
     get_mp3()
 
