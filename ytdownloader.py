@@ -36,7 +36,6 @@ internet()
 
 
 
-
 print(Fore.RESET + "MADE BY")
 print("WILL BEE")
 print(Fore.MAGENTA + "E" + Fore.GREEN + "N" + Fore.YELLOW + "J" + Fore.BLUE + "O" + Fore.MAGENTA + "Y")
@@ -62,21 +61,9 @@ def get_mp3():
     shutil.move(mp3, r"C:\Users\Admin\Music") ###_- !!! YOU NEED TO EDIT THIS LIKE: C:\Users\NAME\Music, or your custom path   !!! -_###
                                               ###_- !!! ANY OTHER DISC MUST BE WRITEN AS "E:\path or F:\path" DONT MAKE MISTAKE!!! -_###
     print("!!!CONVERTED SUCCESFULLY!!!")
+    print(Fore.GREEN + "")
+    
+    get_mp3()
 
 
 get_mp3()
-
-
-def more():
-    print(Fore.GREEN + "more songs?")
-    print("1 = yes")
-    _more = int(input("1 for more: "))
-    if _more == 1:
-        get_mp3()
-        more()
-    else:
-        print("bye")
-
-
-more()
-
