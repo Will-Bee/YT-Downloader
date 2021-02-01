@@ -56,7 +56,7 @@ def get_mp3():
         shutil.move(mp3, r"C:\Users\Admin\Music")     ###_- !!! YOU NEED TO EDIT THIS LIKE: C:\Users\NAME\Music, or your custom path   !!! -_###
                                                       ###_- !!! ANY OTHER DISC MUST BE WRITEN AS "E:\path or F:\path" DONT MAKE MISTAKE!!! -_###
     except:
-        print(Fore.RED + "!!your mp3 file is in folder with my project!!! (you must set the path in line 56 in .py file, or it is already downloaded)")
+        print(Fore.RED + "!!your mp3 file is in folder with my project!!!")
         print("(you must set the path in line 56 in .py file, or it is already downloaded)")
 
     finally:
