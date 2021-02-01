@@ -50,8 +50,8 @@ def get_mp3():
 
         os.remove(mp4)
         try:                                                       ###_- !!! PATH WHERE YOUR FILES WILL BE DOWNLOADED, TAKE A SEC TO EDIT           !!! -_###
-            shutil.move(mp3, r"Music")                             ###_- !!! YOU NEED TO EDIT THIS LIKE: r"C:\Users\NAME\Folder", or your custom path   !!! -_###
-            print(Fore.CYAN + "Downloaded to your Music folder")  ###_- !!! ANY OTHER DISC MUST BE WRITEN AS "E:\path or F:\path" DONT MAKE MISTAKE!!! -_###
+            shutil.move(mp3, r"C:\your\own\path")              ###_- !!! YOU NEED TO EDIT THIS LIKE: r"C:\Users\NAME\Folder", or your custom path   !!! -_###
+            print(Fore.CYAN + "Downloaded to your Music folder")   ###_- !!! ANY OTHER DISC MUST BE WRITEN AS "E:\path or F:\path" DONT MAKE MISTAKE!!! -_###
         except:
             print(Fore.CYAN + "!!!your mp3 file is in folder with my project!!!")
             print("!!!you must set the path in line 56 in .py file, or it is already downloaded!!!")
