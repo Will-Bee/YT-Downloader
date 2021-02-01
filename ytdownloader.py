@@ -31,16 +31,6 @@ def internet():
         internet()
 
 
-internet()
-
-
-
-
-print(Fore.RESET + "MADE BY")
-print("WILL BEE")
-print(Fore.MAGENTA + "E" + Fore.GREEN + "N" + Fore.YELLOW + "J" + Fore.BLUE + "O" + Fore.MAGENTA + "Y")
-print(Fore.GREEN + " ") ###_- JUST A COLORFULL TEXT :D -_###
-
 def get_mp3():
     url = input("YT link: ")
     print(Fore.YELLOW + "Waiting for download, wait a sec.")
@@ -61,9 +51,15 @@ def get_mp3():
     shutil.move(mp3, r"C:\Users\Admin\Music") ###_- !!! YOU NEED TO EDIT THIS LIKE: C:\Users\NAME\Music, or your custom path   !!! -_###
                                               ###_- !!! ANY OTHER DISC MUST BE WRITEN AS "E:\path or F:\path" DONT MAKE MISTAKE!!! -_###
     print("!!!CONVERTED SUCCESFULLY!!!")
-    print(Fore.GREEN + " ")
+    print(Fore.GREEN + "")
     
     get_mp3()
 
+internet()
+
+print(Fore.RESET + "MADE BY")
+print("WILL BEE")
+print(Fore.MAGENTA + "E" + Fore.GREEN + "N" + Fore.YELLOW + "J" + Fore.BLUE + "O" + Fore.MAGENTA + "Y")
+print(Fore.GREEN + " ") ###_- JUST A COLORFULL TEXT :D -_###
 
 get_mp3()
