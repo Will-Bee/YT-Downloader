@@ -20,7 +20,6 @@ def is_internet():
         print(Error)
         return False
 
-
 def internet():
     if is_internet():
         print(Fore.GREEN + "CONNECTION OK")
@@ -30,6 +29,11 @@ def internet():
         input()
         internet()
 
+def intro():
+    print(Fore.RESET + "MADE BY")
+    print("WILL BEE")
+    print(Fore.MAGENTA + "E" + Fore.GREEN + "N" + Fore.YELLOW + "J" + Fore.BLUE + "O" + Fore.MAGENTA + "Y")
+    print(Fore.GREEN + " ") ###_- JUST A COLORFULL TEXT :D -_###
 
 def get_mp3():
     url = input("YT link: ")
@@ -47,19 +51,21 @@ def get_mp3():
     audio_clip.close()
     video_clip.close()
 
-    os.remove(mp4)                            ###_- !!! PATH WHERE YOUR FILES WILL BE DOWNLOADED, TAKE A SEC TO EDIT           !!! -_###
-    shutil.move(mp3, r"C:\Users\Admin\Music") ###_- !!! YOU NEED TO EDIT THIS LIKE: C:\Users\NAME\Music, or your custom path   !!! -_###
-                                              ###_- !!! ANY OTHER DISC MUST BE WRITEN AS "E:\path or F:\path" DONT MAKE MISTAKE!!! -_###
-    print("!!!CONVERTED SUCCESFULLY!!!")
-    print(Fore.GREEN + "")
+    os.remove(mp4)                                    ###_- !!! PATH WHERE YOUR FILES WILL BE DOWNLOADED, TAKE A SEC TO EDIT           !!! -_###
+    try:
+        shutil.move(mp3, r"C:\Users\Admin\Music")     ###_- !!! YOU NEED TO EDIT THIS LIKE: C:\Users\NAME\Music, or your custom path   !!! -_###
+                                                      ###_- !!! ANY OTHER DISC MUST BE WRITEN AS "E:\path or F:\path" DONT MAKE MISTAKE!!! -_###
+    except:
+        print(Fore.RED + "!!your mp3 file is in folder with my project!!! (you must set the path in line 56 in .py file, or it is already downloaded)")
+
+    finally:
+        print(Fore.MAGENTA + "!!!CONVERTED SUCCESFULLY!!!")
+        print(Fore.GREEN + "")
     
     get_mp3()
 
 internet()
 
-print(Fore.RESET + "MADE BY")
-print("WILL BEE")
-print(Fore.MAGENTA + "E" + Fore.GREEN + "N" + Fore.YELLOW + "J" + Fore.BLUE + "O" + Fore.MAGENTA + "Y")
-print(Fore.GREEN + " ") ###_- JUST A COLORFULL TEXT :D -_###
+intro()
 
 get_mp3()
