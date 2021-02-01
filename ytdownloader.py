@@ -9,10 +9,6 @@ from urllib.request import urlopen
 ###_-CONNECTION TEST-_###
 
 def is_internet():
-    """
-    Query internet using python
-    :return:
-    """
     try:
         urlopen('https://www.google.com', timeout=1)
         return True
