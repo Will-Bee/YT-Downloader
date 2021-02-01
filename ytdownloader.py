@@ -33,31 +33,36 @@ def intro():
 
 def get_mp3():
     url = input("YT link: ")
-    print(Fore.YELLOW + "Waiting for download, wait a sec.")
-    mp4 = YouTube(url).streams.get_highest_resolution().download()
-    mp3 = mp4.split(".mp4", 1)[0] + f".mp3"
-
-    print("!!!DOWNLOADED SUCCESSFULLY!!!")
-    print(Fore.MAGENTA + "Waiting for MoviePy...")
-
-    video_clip = VideoFileClip(mp4)
-    audio_clip = video_clip.audio
-    audio_clip.write_audiofile(mp3)
-
-    audio_clip.close()
-    video_clip.close()
-
-    os.remove(mp4)                                    ###_- !!! PATH WHERE YOUR FILES WILL BE DOWNLOADED, TAKE A SEC TO EDIT           !!! -_###
     try:
-        shutil.move(mp3, r"C:\Users\Admin\Music")     ###_- !!! YOU NEED TO EDIT THIS LIKE: C:\Users\NAME\Music, or your custom path   !!! -_###
-                                                      ###_- !!! ANY OTHER DISC MUST BE WRITEN AS "E:\path or F:\path" DONT MAKE MISTAKE!!! -_###
-    except:
-        print(Fore.RED + "!!your mp3 file is in folder with my project!!!")
-        print("(you must set the path in line 56 in .py file, or it is already downloaded)")
+        print(Fore.YELLOW + "Waiting for download, wait a sec.")
+        mp4 = YouTube(url).streams.get_highest_resolution().download()
+        mp3 = mp4.split(".mp4", 1)[0] + f".mp3"
 
-    finally:
-        print(Fore.MAGENTA + "!!!CONVERTED SUCCESFULLY!!!")
-        print(Fore.GREEN + "")
+        print("!!!DOWNLOADED SUCCESSFULLY!!!")
+        print(Fore.MAGENTA + "Waiting for MoviePy...")
+
+        video_clip = VideoFileClip(mp4)
+        audio_clip = video_clip.audio
+        audio_clip.write_audiofile(mp3)
+
+        audio_clip.close()
+        video_clip.close()
+
+        os.remove(mp4)                                    ###_- !!! PATH WHERE YOUR FILES WILL BE DOWNLOADED, TAKE A SEC TO EDIT           !!! -_###
+        try:
+            shutil.move(mp3, r"C:\Users\Admin\Music")     ###_- !!! YOU NEED TO EDIT THIS LIKE: C:\Users\NAME\Music, or your custom path   !!! -_###
+                                                          ###_- !!! ANY OTHER DISC MUST BE WRITEN AS "E:\path or F:\path" DONT MAKE MISTAKE!!! -_###
+        except:
+            print(Fore.RED + "!!!your mp3 file is in folder with my project!!!")
+            print("!!!you must set the path in line 56 in .py file, or it is already downloaded!!!")
+
+        finally:
+            print(Fore.MAGENTA + "!!!CONVERTED SUCCESFULLY!!!")
+            print(Fore.GREEN + "")
+    except:
+        print(Fore.RED + "WRONG LINK !!")
+        print(Fore.GREEN + " ")
+        get_mp3()
     
     get_mp3()
 
