@@ -6,7 +6,7 @@ import shutil
 import urllib
 from urllib.request import urlopen
 
-###_- Write path of your music folder here (u must use /, not \) -_###
+###_- Write path of your music folder here (you must use /, not \) -_###
 final_location = 'C:/path/path/folder_to_save_music'
 
 def is_internet():
