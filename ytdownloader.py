@@ -6,14 +6,14 @@ import shutil
 import urllib
 from urllib.request import urlopen
 
-###_-CONNECTION TEST-_###
+###_- Write path of your music folder here (u must use /, not \) -_###
+final_location = 'C:/path/path/folder_to_save_music'
 
 def is_internet():
     try:
         urlopen('https://www.google.com', timeout=1)
         return True
     except urllib.error.URLError as Error:
-        print(Error)
         return False
 
 def internet():
@@ -21,9 +21,12 @@ def internet():
         print(Fore.GREEN + "CONNECTION OK")
     else:
         print(Fore.RED + "NO CONNECTION")
-        print(Fore.RESET + "PRESS ENTER TO TRY AGAIN")
-        input()
-        internet()
+        print(Fore.RESET + "!!! PRESS ENTER TO TRY AGAIN !!!")
+        internet_again = input("N to exit, or press enter: ")
+        if internet_again == "N" or internet_again == "n":
+            exit()
+        else:
+            internet()
 
 def intro():
     print(Fore.RESET + "MADE BY")
@@ -49,9 +52,9 @@ def get_mp3():
         video_clip.close()
 
         os.remove(mp4)
-        try:                                                       ###_- !!! PATH WHERE YOUR FILES WILL BE DOWNLOADED, TAKE A SEC TO EDIT           !!! -_###
-            shutil.move(mp3, r"C:\your\own\path")              ###_- !!! YOU NEED TO EDIT THIS LIKE: r"C:\Users\NAME\Folder", or your custom path   !!! -_###
-            print(Fore.CYAN + "Downloaded to your Music folder")   ###_- !!! ANY OTHER DISC MUST BE WRITEN AS "E:\path or F:\path" DONT MAKE MISTAKE!!! -_###
+        try:
+            shutil.move(mp3, final_location)
+            print(Fore.CYAN + "Downloaded to your Music folder")
         except:
             print(Fore.CYAN + "!!!your mp3 file is in folder with my project!!!")
             print("!!!you must set the path in line 56 in .py file, or it is already downloaded!!!")
