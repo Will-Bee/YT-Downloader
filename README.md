@@ -1,5 +1,5 @@
 # YT-Downloader
-Thing that will download you mp3 file from youtube
+Script for downloading mp3 files from youtube
 
 writen in python
 
@@ -7,8 +7,7 @@ writen in python
 
 IN LINE 10
 
-YOU MUST EDIT PATH WHERE WILL YOUR MP3 FILE APPEAR
-
+Edit path to folder where you want to save your music
 
 !!! ALSO !!!
 
