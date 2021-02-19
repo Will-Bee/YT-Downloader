@@ -10,7 +10,7 @@ Script for downloading mp3 files from youtube
 
 To install required modules run 
 
-`pip install requirements.txt`
+`pip install -r requirements.txt`
 
 
 ## Running
