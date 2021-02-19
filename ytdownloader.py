@@ -6,18 +6,18 @@ import shutil
 import urllib
 from urllib.request import urlopen
 
-###_- Write path of your music folder here (you must use /, not \) -_###
-final_location = 'C:/path/path/folder_to_save_music'
+###_- Write path of your music folder here (u must use /, not \) -_###
+final_location = 'C:/Users/Admin/Desktop/DownloadedSongs'
 
-def is_internet():
+def Internet_Check():
     try:
         urlopen('https://www.google.com', timeout=1)
         return True
-    except urllib.error.URLError as Error:
+    except:
         return False
 
 def internet():
-    if is_internet():
+    if Internet_Check():
         print(Fore.GREEN + "CONNECTION OK")
     else:
         print(Fore.RED + "NO CONNECTION")
@@ -57,7 +57,7 @@ def get_mp3():
             print(Fore.CYAN + "Downloaded to your Music folder")
         except:
             print(Fore.CYAN + "!!!your mp3 file is in folder with my project!!!")
-            print("!!!you must set the path in line 56 in .py file, or it is already downloaded!!!")
+            print("!!!you must set the path in line 10 in .py file, or it is already downloaded!!!")
 
         finally:
             print(Fore.MAGENTA + "!!!CONVERTED SUCCESFULLY!!!")
