@@ -6,7 +6,6 @@ Script for downloading mp3 files from youtube
 ## Requirements
 
 `python`
-
 `pip`
 
 To install required modules run 
