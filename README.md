@@ -1,21 +1,22 @@
 # YT-Downloader
+
 Script for downloading mp3 files from youtube
 
-writen in python
 
-!!! READ THIS !!!
+## Requirements
 
-IN LINE 10
+`python`
+`pip`
 
-Edit path to folder where you want to save your music
+To install required modules run 
 
-!!! ALSO !!!
-
-setup.bat will install python libraries u need, so run it first
-
-run.bat will run command: python ytdownloader.py
+`pip install requirements.txt`
 
 
-you thing this is not legit, it is opensource, so you can view full code to be sure
+## Running
 
-Enjoy!
+To start the program run this command
+
+```
+python ytdownloader.py
+```
