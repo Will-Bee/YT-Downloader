@@ -6,7 +6,7 @@ import shutil
 from urllib.request import urlopen
 
 
-###_- Write path of your music folder here (u must use /, not \) -_###
+###_- Write path of your music folder here (u must use /, not \)! -_###
 final_location = 'C:/Users/Admin/Desktop/DownloadedSongs'
 
 def Internet_Check():
